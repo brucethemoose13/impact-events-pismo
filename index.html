@@ -130,6 +130,23 @@
   .speaker h3{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--ink);line-height:1.25;}
   .speaker p{margin-top:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-on-light);line-height:1.7;}
 
+  /* ---------- Book signing ---------- */
+  .booksign{position:relative;overflow:hidden;background:
+    radial-gradient(65% 70% at 12% 15%, rgba(231,202,115,.13) 0%, transparent 55%),
+    radial-gradient(70% 60% at 95% 90%, rgba(154,193,238,.10) 0%, transparent 60%),
+    linear-gradient(165deg, #0A2038 0%, var(--ink) 60%, #071B30 100%);
+    padding:110px 0;border-top:1px solid rgba(231,202,115,.15);}
+  .booksign::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(233,228,218,.04) 1px, transparent 1px);background-size:26px 26px;pointer-events:none;}
+  .booksign .inner{position:relative;display:grid;grid-template-columns:.8fr 1.2fr;gap:74px;align-items:center;}
+  .book-cover{max-width:340px;margin:0 auto;border:1px solid rgba(231,202,115,.35);border-radius:4px;padding:10px;background:rgba(255,255,255,.03);box-shadow:0 40px 90px rgba(0,0,0,.5);transform:rotate(-1.5deg);transition:transform .4s ease;}
+  .book-cover:hover{transform:rotate(0deg) scale(1.01);}
+  .book-cover img{border-radius:2px;}
+  .booksign h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4.5vw,50px);color:var(--white);margin-top:18px;line-height:1.15;}
+  .booksign h2 em{font-style:italic;color:var(--gold-soft);}
+  .booksign p.copy{margin-top:26px;color:var(--text-on-dark);font-weight:300;font-size:16px;line-height:1.8;max-width:540px;}
+  .booksign p.copy em{color:var(--gold-soft);font-style:italic;}
+  .booksign .actions{margin-top:38px;display:flex;gap:18px;flex-wrap:wrap;}
+
   /* ---------- Venue ---------- */
   .venue{position:relative;background:
     radial-gradient(100% 120% at 100% 0%, rgba(154,193,238,.13) 0%, rgba(154,193,238,0) 50%),
@@ -220,6 +237,8 @@
     .speakers{grid-template-columns:repeat(2,1fr);gap:44px 24px;}
     .pillar-grid{grid-template-columns:1fr;max-width:560px;margin:0 auto;}
     .venue .inner{grid-template-columns:1fr;gap:56px;}
+    .booksign .inner{grid-template-columns:1fr;gap:56px;}
+    .book-cover{max-width:280px;}
     .venue-gallery{grid-template-columns:1fr;max-width:560px;margin:70px auto 0;}
   }
   @media (max-width: 720px){
@@ -390,6 +409,26 @@
   </div>
 </section>
 
+<!-- Book signing -->
+<section class="booksign">
+  <div class="wrap">
+    <div class="inner">
+      <div class="book-cover reveal">
+        <img src="images/selling-sunshine.jpg" alt="Selling Sunshine by Mary Bonnet — book cover">
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">Live Book Signing</div>
+        <h2>Meet Mary Bonnet. <em>Leave with her story.</em></h2>
+        <p class="copy">Luxury agent, author and speaker Mary Bonnet is signing copies of her new book, <em>Selling Sunshine</em> — surviving teenage motherhood, thriving in luxury real estate, and finally finding her voice.</p>
+        <p class="copy">Get your copy signed, get the photo, and take home the story behind one of luxury real estate's most recognizable names.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#rsvp">Reserve My Seat</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Venue -->
 <section class="venue">
   <div class="wrap">
@@ -443,7 +482,7 @@
       </div>
       <div class="slot">
         <div class="time">1:15 – 4:00 PM</div>
-        <div class="what"><strong>Speaker sessions — mind, body &amp; business</strong><span>The marketing that makes you the obvious choice, the mindset that turns a business into a legacy, and the health edge today's top performers rely on.</span></div>
+        <div class="what"><strong>Speaker sessions — mind, body &amp; business</strong><span>The marketing that makes you the obvious choice, the mindset that turns a business into a legacy, and the health edge today's top performers rely on — plus a live book signing with Mary Bonnet.</span></div>
       </div>
       <div class="slot">
         <div class="time">6:00 – 8:00 PM</div>
